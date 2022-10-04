@@ -1,0 +1,121 @@
+init-+-accounts-daemon-+-{gdbus}
+     |                 `-{gmain}
+     |-containerd-shim-+-systemd-+-2*[agetty]
+     |                 |         |-avahi-daemon---avahi-daemon
+     |                 |         |-colord-+-{gdbus}
+     |                 |         |        `-{gmain}
+     |                 |         |-dbus-daemon
+     |                 |         |-lightdm-+-Xorg-+-{InputThread}
+     |                 |         |         |      |-3*[{Xorg:disk$0}]
+     |                 |         |         |      |-{Xorg:gdrv0}
+     |                 |         |         |      |-2*[{Xorg:sh0}]
+     |                 |         |         |      |-2*[{Xorg:sh1}]
+     |                 |         |         |      |-2*[{Xorg:sh2}]
+     |                 |         |         |      |-2*[{Xorg:sh3}]
+     |                 |         |         |      |-2*[{Xorg:sh4}]
+     |                 |         |         |      |-2*[{Xorg:sh5}]
+     |                 |         |         |      |-2*[{Xorg:sh6}]
+     |                 |         |         |      |-2*[{Xorg:sh7}]
+     |                 |         |         |      `-2*[{Xorg:sh8}]
+     |                 |         |         |-lightdm-+-xfce4-session-+-Thunar-+-{gdbus}
+     |                 |         |         |         |               |        `-{gmain}
+     |                 |         |         |         |               |-light-locker-+-{dconf worker}
+     |                 |         |         |         |               |              |-{gdbus}
+     |                 |         |         |         |               |              `-{gmain}
+     |                 |         |         |         |               |-polkit-gnome-au-+-{gdbus}
+     |                 |         |         |         |               |                 `-{gmain}
+     |                 |         |         |         |               |-ssh-agent
+     |                 |         |         |         |               |-xfce4-notifyd-+-{gdbus}
+     |                 |         |         |         |               |               `-{gmain}
+     |                 |         |         |         |               |-xfce4-panel-+-panel-10-notifi-+-{gdbus}
+     |                 |         |         |         |               |             |                 `-{gmain}
+     |                 |         |         |         |               |             |-panel-14-action-+-{gdbus}
+     |                 |         |         |         |               |             |                 `-{gmain}
+     |                 |         |         |         |               |             |-panel-6-systray-+-{gdbus}
+     |                 |         |         |         |               |             |                 `-{gmain}
+     |                 |         |         |         |               |             |-panel-8-pulseau-+-{gdbus}
+     |                 |         |         |         |               |             |                 `-{gmain}
+     |                 |         |         |         |               |             |-panel-9-power-m-+-{gdbus}
+     |                 |         |         |         |               |             |                 `-{gmain}
+     |                 |         |         |         |               |             |-{gdbus}
+     |                 |         |         |         |               |             `-{gmain}
+     |                 |         |         |         |               |-xfce4-power-man-+-{gdbus}
+     |                 |         |         |         |               |                 `-{gmain}
+     |                 |         |         |         |               |-xfdesktop-+-{gdbus}
+     |                 |         |         |         |               |           `-{gmain}
+     |                 |         |         |         |               |-xfsettingsd-+-{gdbus}
+     |                 |         |         |         |               |             `-{gmain}
+     |                 |         |         |         |               |-xfwm4-+-{gdbus}
+     |                 |         |         |         |               |       |-{gmain}
+     |                 |         |         |         |               |       |-{xfwm4:disk$0}
+     |                 |         |         |         |               |       |-{xfwm4:sh0}
+     |                 |         |         |         |               |       |-{xfwm4:sh1}
+     |                 |         |         |         |               |       |-{xfwm4:sh2}
+     |                 |         |         |         |               |       |-{xfwm4:sh3}
+     |                 |         |         |         |               |       |-{xfwm4:sh4}
+     |                 |         |         |         |               |       |-{xfwm4:sh5}
+     |                 |         |         |         |               |       |-{xfwm4:sh6}
+     |                 |         |         |         |               |       |-{xfwm4:sh7}
+     |                 |         |         |         |               |       `-{xfwm4:sh8}
+     |                 |         |         |         |               |-xiccd-+-{gdbus}
+     |                 |         |         |         |               |       `-{gmain}
+     |                 |         |         |         |               |-{gdbus}
+     |                 |         |         |         |               `-{gmain}
+     |                 |         |         |         |-{gdbus}
+     |                 |         |         |         `-{gmain}
+     |                 |         |         |-{gdbus}
+     |                 |         |         `-{gmain}
+     |                 |         |-polkitd-+-{gdbus}
+     |                 |         |         `-{gmain}
+     |                 |         |-systemd-+-(sd-pam)
+     |                 |         |         |-at-spi-bus-laun-+-dbus-daemon
+     |                 |         |         |                 |-{dconf worker}
+     |                 |         |         |                 |-{gdbus}
+     |                 |         |         |                 `-{gmain}
+     |                 |         |         |-at-spi2-registr-+-{gdbus}
+     |                 |         |         |                 `-{gmain}
+     |                 |         |         |-dbus-daemon
+     |                 |         |         |-dconf-service-+-{gdbus}
+     |                 |         |         |               `-{gmain}
+     |                 |         |         |-gpg-agent
+     |                 |         |         |-gvfs-udisks2-vo-+-{dconf worker}
+     |                 |         |         |                 |-{gdbus}
+     |                 |         |         |                 `-{gmain}
+     |                 |         |         |-gvfsd-+-gvfsd-trash-+-{gdbus}
+     |                 |         |         |       |             `-{gmain}
+     |                 |         |         |       |-{gdbus}
+     |                 |         |         |       `-{gmain}
+     |                 |         |         |-gvfsd-metadata-+-{gdbus}
+     |                 |         |         |                `-{gmain}
+     |                 |         |         |-pulseaudio-+-{alsa-sink-ALC25}
+     |                 |         |         |            `-{alsa-source-ALC}
+     |                 |         |         |-tumblerd-+-{gdbus}
+     |                 |         |         |          |-{gmain}
+     |                 |         |         |          `-13*[{pool-tumblerd}]
+     |                 |         |         `-xfconfd-+-{gdbus}
+     |                 |         |                   `-{gmain}
+     |                 |         |-systemd-journal
+     |                 |         |-systemd-logind
+     |                 |         |-2*[systemd-udevd]
+     |                 |         |-udisksd-+-{cleanup}
+     |                 |         |         |-{gdbus}
+     |                 |         |         |-{gmain}
+     |                 |         |         `-{probing-thread}
+     |                 |         `-upowerd-+-{gdbus}
+     |                 |                   `-{gmain}
+     |                 `-11*[{containerd-shim}]
+     |-dbus-daemon
+     |-docker---14*[{docker}]
+     |-5*[getty]
+     |-login---ash
+     |-polkitd-+-{gdbus}
+     |         `-{gmain}
+     |-sshd---sshd---sshd---ash-+-nc
+     |                          `-pstree
+     |-supervise-daemo---elogind
+     |-supervise-daemo---wpa_supplicant
+     |-supervise-daemo---NetworkManager-+-{gdbus}
+     |                                  `-{gmain}
+     |-supervise-daemo---dockerd-+-containerd---18*[{containerd}]
+     |                           `-15*[{dockerd}]
+     `-udevd
