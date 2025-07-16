@@ -27,12 +27,7 @@ jobs:
           mkdir -p output  # Create an output directory
           for file in content/*.md; do
             filename=$(basename "$file" .md)
-            python -c "import sys; from docutils.core import publish_string; \
-            with open('$file', 'r') as f: \
-                text = f.read(); \
-            html = publish_string(text, writer_name='html'); \
-            with open('output/$filename.html', 'wb') as f: \
-                f.write(html)"  # Convert .md to .html
+            python -c "import sys; from docutils.core import publish_string; f = open('$file', 'r'); text = f.read(); html = publish_string(text, writer_name='html'); g = open('output/$filename.html', 'wb'); g.write(html)"
           done
 
       - name: Deploy to GitHub Pages
