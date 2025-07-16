@@ -1,0 +1,42 @@
+name: Convert Markdown to HTML
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch if different
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # Specify the Python version you want
+
+      - name: Install dependencies
+        run: |
+          pip install docutils  # Install docutils
+
+      - name: Convert Markdown to HTML
+        run: |
+          mkdir -p output  # Create an output directory
+          for file in content/*.md; do
+            filename=$(basename "$file" .md)
+            python -c "import sys; from docutils.core import publish_string; \
+            with open('$file', 'r') as f: \
+                text = f.read(); \
+            html = publish_string(text, writer_name='html'); \
+            with open('output/$filename.html', 'wb') as f: \
+                f.write(html)"  # Convert .md to .html
+          done
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
