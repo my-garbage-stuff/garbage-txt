@@ -22,6 +22,8 @@ Bu noktada yukarıdaki gibi bir çıktı aldıysanız, sorunsuz şekilde yüklen
 
 İşlem bittikten sonra aşağıdaki gibi diski ayırabilirsiniz.
 
+![Disk Ayırma](https://github.com/user-attachments/assets/e1556bd7-1b9a-41ae-8380-3e23436a0199)
+
 ## Olası Çözümler
 
 1. **Kök dizinin grub tarafından okunabilir bir yerde olduğundan emin olun.** Örneğin, grub LVM üzerine kurulamaz. Eğer kök dizini grub tarafından okunamayacak bir şekilde kullanıyorsanız, ayrı bir `/boot` bölümü oluşturun.
