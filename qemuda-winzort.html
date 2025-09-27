@@ -366,11 +366,11 @@ ul.auto-toc {
 
 <p># Qemu ile winzort kurulumu ve ayarlanması
 ## Hazırlık
-1- qemu yoksa kurun
-2- boşta alan ayırın
-3- winzort isosu indirin (ltsc olsa daha iyi olur. daha az çöple uğraşırsınız)
-3- besmele çekin
-## Disk imajı hazırlanması
+1- qemu yoksa kurun (debian kullanıyorsan <cite>apt install qemu-kvm</cite>)</p>
+<p>2- boşta alan ayırın (50gb ve üstü ideal)</p>
+<p>3- winzort isosu indirin (ltsc olsa daha iyi olur. daha az çöple uğraşırsınız)</p>
+<p>3- besmele çekin</p>
+<p>## Disk imajı hazırlanması
 <tt class="docutils literal">`sh
 # disk imajı oluşturun
 <span class="pre">qemu-img</span> create <span class="pre">-f</span> qcow2 ~/winzort.qcow 50G
@@ -382,23 +382,23 @@ ul.auto-toc {
 # OVMF.fd yoksa indirin: https://github.com/clearlinux/common/blob/master/OVMF.fd
 qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc</cite></p>
 <div class="system-message" id="system-message-1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 1); <em><a href="#problematic-1">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 11); <em><a href="#problematic-1">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 18)</p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 22)</p>
 Unexpected indentation.</div>
 <blockquote>
 -cdrom Downloads/en-us_windows_10_consumer_editions_version_22h2_updated_feb_2023_x64_dvd_c29e4bb3.iso -hda ~/winzort.qcow -net none -bios ~/OVMF.fd</blockquote>
 <div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 22)</p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26)</p>
 Block quote ends without a blank line; unexpected unindent.</div>
 <p># kurarken diskin tamanını kullanın. Oturum falan açmayın.
 <a href="#system-message-2"><span class="problematic" id="problematic-2">``</span></a><a href="#system-message-3"><span class="problematic" id="problematic-3">`</span></a></p>
 <div class="system-message" id="system-message-2">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 22); <em><a href="#problematic-2">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26); <em><a href="#problematic-2">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 22); <em><a href="#problematic-3">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 26); <em><a href="#problematic-3">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 </div>
 </body>
