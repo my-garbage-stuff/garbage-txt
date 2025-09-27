@@ -19,6 +19,7 @@ qemu-img create -f qcow2 ~/winzort.qcow 50G
 # uefi kurulum yapalım.
 # OVMF.fd yoksa indirin: https://github.com/clearlinux/common/blob/master/OVMF.fd
 qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc`\
+  -cpu host \
   -cdrom Downloads/en-us_windows_10_consumer_editions_version_22h2_updated_feb_2023_x64_dvd_c29e4bb3.iso \
   -hda ~/winzort.qcow \
   -net none \
@@ -46,3 +47,19 @@ Defender hiçbi boka yaramayıp gereksiz kastırdığı için kapatalım. Bunu y
 Defender sikici: https://github.com/ionuttbara/windows-defender-remover
 
 Edge çöp o yüzden silip firefox kurun. https://github.com/ionuttbara/edge-remover
+
+## rdp ayarlama
+Winzortun ayarlarından rdp servisini açın. (Ayarları çorba gibi siz bulursunuz bi şekil)
+
+## Sanal makinanın nihai parametreleri ile başlatma
+Sanal makinayı başlatmak için artık `run.sh` adında bi zımbırtı yazıp onla kullanmaya başlama zamanımız geldi.
+```sh
+qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc` \
+  -drive id=disk0,format=qcow2,file=~/winzort.qcow,cache=writeback,aio=native,cache.direct=on \
+  -rtc base=localtime \
+  -bios ~/OVMF.fd \
+  -vga virtio \
+  -display none
+  -netdev user,id=net0,hostfwd=tcp::33899-:3389 -device e1000,netdev=net0
+```
+
