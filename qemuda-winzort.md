@@ -1,65 +1,99 @@
-# Qemu ile winzort kurulumu ve ayarlanması
-## Hazırlık
-1- qemu yoksa kurun (debian kullanıyorsan `apt install qemu-kvm`)
+## QEMU ile Windows Kurulumu ve Ayarlanması 🖥️
 
-2- boşta alan ayırın (50gb ve üstü ideal)
+Windows işletim sistemini QEMU üzerinde kurmak için aşağıdaki adımları takip edebilirsiniz. Bu rehber, adım adım ilerleyerek gerekli hazırlıkları ve ayarları içermektedir.
 
-3- winzort isosu indirin (ltsc olsa daha iyi olur. daha az çöple uğraşırsınız)
+---
 
-3- besmele çekin
+## Hazırlık 🛠️
 
-## Disk imajı hazırlanması
+1. **QEMU Kurulumu**: Eğer QEMU yüklü değilse, Debian tabanlı bir sistemde aşağıdaki komutu kullanarak kurabilirsiniz:
+   ```sh
+   sudo apt install qemu-kvm
+   ```
+
+2. **Boş Alan Ayırma**: En az **50 GB** boş alan ayırın. Bu, Windows'un düzgün çalışması için idealdir. 💾
+
+3. **Windows ISO İndirme**: Windows'un LTSC sürümünü indirin. Bu sürüm, gereksiz bileşenlerden kaçınmanıza yardımcı olur. 📥
+
+4. **Besmele Çekme**: Kurulum öncesi bir motivasyon kaynağı olarak besmele çekin. 🙏
+
+---
+
+## Disk İmajı Hazırlanması 💽
+
+Disk imajı oluşturmak için aşağıdaki komutu kullanın:
 ```sh
-# disk imajı oluşturun
+# Disk imajı oluşturun
 qemu-img create -f qcow2 ~/winzort.qcow 50G
 ```
-## Winzort kurulumu
+
+---
+
+## Windows Kurulumu 🏗️
+
+Windows kurulumunu başlatmak için aşağıdaki komutu kullanın. Bu komut, ISO dosyasını ve disk imajını göstererek internetsiz bir kurulum yapmanızı sağlar. UEFI kurulumunu gerçekleştirmek için OVMF dosyasını indirmeniz gerekecek.
+
 ```sh
-# iso dosyasını ve disk imajını gösterip internetsiz kurulum yapalım.
-# uefi kurulum yapalım.
-# OVMF.fd yoksa indirin: https://github.com/clearlinux/common/blob/master/OVMF.fd
-qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc`\
+# OVMF.fd dosyasını indirin
+# https://github.com/clearlinux/common/blob/master/OVMF.fd
+qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc` \
   -cpu host \
-  -cdrom Downloads/en-us_windows_10_consumer_editions_version_22h2_updated_feb_2023_x64_dvd_c29e4bb3.iso \
+  -cdrom ~/Downloads/en-us_windows_10_consumer_editions_version_22h2_updated_feb_2023_x64_dvd_c29e4bb3.iso \
   -hda ~/winzort.qcow \
   -net none \
   -bios ~/OVMF.fd \
   -usbdevice tablet
-# kurarken diskin tamanını kullanın. Oturum falan açmayın.
 ```
-Kurulum bittikten sonra `-net none` parametresine artık ihtiyaç duymuyoruz.
+Kurulum sırasında diskin tamamını kullanın ve oturum açmayın. 🚫
 
+Kurulum tamamlandıktan sonra `-net none` parametresine artık ihtiyaç duymayacaksınız.
 
-## virtio yükleme
-Virtio olmadan çözünürlük bok gibi gözükür ve kasarak çalışır. 
+---
 
-1- sanal makinayı kapatın.
+## Virtio Yükleme 🚀
 
-2- Şuradan sür sürümünün isosunu indirip cdrom olarak bağlayın: https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/
+Virtio sürücülerini yüklemek, çözünürlük ve performans sorunlarını gidermek için önemlidir.
 
-3- Winzortu başlatıp sürücüyü ve guest toolu yükleyin.
+1. **Sanal Makineyi Kapatın**. 📴
+2. **Virtio ISO'sunu İndirin**: Aşağıdaki bağlantıdan uygun sürümün ISO dosyasını indirin ve CD-ROM olarak bağlayın:
+   [Virtio Sürücü İndirme](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/)
+3. **Windows'u Başlatın** ve sürücüleri ve misafir araçlarını yükleyin. 💻
+4. **Sanal Makinayı Yeniden Başlatın**. 🔄
 
-4- Sanal makinayı yeniden başlatın.
+---
 
-## Edge ve Defender silme
-Defender hiçbi boka yaramayıp gereksiz kastırdığı için kapatalım. Bunu yapmazsak sanal makinada düzgün performans beklemeyin.
+## Edge ve Defender'ı Kaldırma ❌
 
-Defender sikici: https://github.com/ionuttbara/windows-defender-remover
+Windows Defender, performansı olumsuz etkileyebilir. Bu nedenle kapatılması önerilir. Defender'ı kaldırmak için aşağıdaki bağlantıyı kullanabilirsiniz:
+[Defender Kaldırıcı](https://github.com/ionuttbara/windows-defender-remover)
 
-Edge çöp o yüzden silip firefox kurun. https://github.com/ionuttbara/edge-remover
+Ayrıca, Edge tarayıcısını kaldırıp Firefox yüklemek için şu bağlantıyı kullanabilirsiniz:
+[Edge Kaldırıcı](https://github.com/ionuttbara/edge-remover)
 
-## rdp ayarlama
-Winzortun ayarlarından rdp servisini açın. (Ayarları çorba gibi siz bulursunuz bi şekil)
+---
 
-## Sanal makinanın nihai parametreleri ile başlatma
-Sanal makinayı başlatmak için artık `run.sh` adında bi zımbırtı yazıp onla kullanmaya başlama zamanımız geldi.
+## RDP Ayarlama 🔧
+
+Windows'un ayarlarından RDP (Uzak Masaüstü Protokolü) servisini açın. Ayarları bulmak için menülerde gezinin.
+
+---
+
+## Sanal Makinenin Nihai Parametreleri ile Başlatma 🎉
+
+Sanal makinayı başlatmak için `run.sh` adında bir dosya oluşturun ve aşağıdaki komutları ekleyin:
+
 ```sh
 qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc` \
   -drive id=disk0,format=qcow2,file=~/winzort.qcow,cache=writeback,aio=native,cache.direct=on \
   -rtc base=localtime \
   -bios ~/OVMF.fd \
   -vga virtio \
-  -display none
-  -netdev user,id=net0,hostfwd=tcp::33899-:3389 -device e1000,netdev=net0
+  -display none \
+  -netdev user,id=net0,hostfwd=tcp::33899-:3389 -device e1000,netdev
+
 ```
 
+Bağlanmak için [Remmina](https://remmina.org/) kullanabilirsiniz.
+
+Sanal makinenizi başarıyla başlattıktan sonra, Windows'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
+Herhangi bir sorunla karşılaşırsanız, dökümantasyon veya topluluk forumlarından yardım almayı unutmayın. İyi çalışmalar! 🎊
