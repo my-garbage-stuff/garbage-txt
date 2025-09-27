@@ -100,7 +100,8 @@ Ana makinada [rclone](https://rclone.org/) kullanarak webdav server başlatabili
 
 ```sh
 # debiansa apt install rclone
-rclone serve webdav --addr 0.0.0.0:8000 /
+rclone serve webdav --addr 127.0.0.1:8000 /
+# 127.0.0.1 yerine 0.0.0.0 yazarsanız önüne gelen bağlanır.
 ```
 
 ### Winzorttan webdava bağlanmak için:
