@@ -454,7 +454,7 @@ Herhangi bir sorunla karşılaşırsanız, dökümantasyon veya topluluk forumla
 <p>Ana makinada <strong>rclone</strong> kullanarak WebDAV sunucusu başlatabilirsiniz. Sanal makinanızın <strong>10.0.2.2</strong> IP adresi ile ana makinayla ağ bağlantısı bulunmaktadır.</p>
 <p><a href="#system-message-6"><span class="problematic" id="problematic-6">``</span></a><a href="#system-message-7"><span class="problematic" id="problematic-7">`</span></a>sh
 # Debian tabanlı bir sistemde rclone yüklemek için:
-apt install rclone</p>
+sudo apt install rclone</p>
 <div class="system-message" id="system-message-6">
 <p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 105); <em><a href="#problematic-6">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
@@ -462,7 +462,7 @@ Inline literal start-string without end-string.</div>
 <p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 105); <em><a href="#problematic-7">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p># WebDAV sunucusunu başlatmak için:
-rclone serve webdav --addr 127.0.0.1:8000 /
+rclone serve webdav --addr 127.0.0.1:8000 $HOME
 # 127.0.0.1 yerine 0.0.0.0 yazarsanız, tüm IP adreslerinden bağlantı kabul edilir.
 <a href="#system-message-8"><span class="problematic" id="problematic-8">``</span></a><a href="#system-message-9"><span class="problematic" id="problematic-9">`</span></a></p>
 <div class="system-message" id="system-message-8">
