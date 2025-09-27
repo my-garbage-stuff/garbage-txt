@@ -151,5 +151,5 @@ Artık dosyalarınıza kolayca erişebilir ve paylaşabilirsiniz! 😊
 3. QEMU'ya aşağıdaki parametreyi ekleyin: 
    ```
    -device qemu-xhci,id=xhci -device usb-host,vendorid=0x3131,productid=0x6969
-   ``` 🛠️
-   - Bu parametre, USB cihazınızı QEMU sanal makinesine bağlamak için kullanılır.
+   ```
+   - Bu parametre, USB cihazınızı QEMU sanal makinesine bağlamak için kullanılır. 🛠️
