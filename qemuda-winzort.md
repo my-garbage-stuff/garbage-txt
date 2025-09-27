@@ -95,5 +95,19 @@ qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc` \
 
 Bağlanmak için [Remmina](https://remmina.org/) kullanabilirsiniz.
 
+## Dosya paylaşımı
+Ana makinada [rclone](https://rclone.org/) kullanarak webdav server başlatabilirsiniz. sanal makina `10.0.2.2` ip adresi olarak ana makinayla ağ bağlantısına sahiptir.
+
+```sh
+# debiansa apt install rclone
+rclone serve webdav --addr 0.0.0.0:8000 /
+```
+
+### Winzorttan webdava bağlanmak için:
+1- bilgisayarımı açın
+2- map network drive tuşuna basın
+3- adres yerine `http://10.0.2.2:8000` yazın
+4- kaydedin.
+
 Sanal makinenizi başarıyla başlattıktan sonra, Windows'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
 Herhangi bir sorunla karşılaşırsanız, dökümantasyon veya topluluk forumlarından yardım almayı unutmayın. İyi çalışmalar! 🎊
