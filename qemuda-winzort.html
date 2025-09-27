@@ -408,14 +408,16 @@ Kurulum sırasında diskin tamamını kullanın ve oturum açmayın. 🚫</p>
 <p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 46); <em><a href="#problematic-2">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <p>Kurulum tamamlandıktan sonra <cite>-net none</cite> parametresine artık ihtiyaç duymayacaksınız.</p>
-<p>### TPM ve Secureboot hatası çözümü
-Winzort 11 kurulumunda sorun çıkartırsa şunu uygulayın:</p>
-<p>1- kuruluma başlamadan önce <cite>Shift F10</cite> yapın</p>
-<p>2- regedit.exe açın</p>
-<p>3- HKEY_LOCAL_MACHINESYSTEMSetup kısmına gelin</p>
-<p>4- sağ tıklayıp yeni kısmından <strong>LabConfig</strong> adında bir key oluşturun. ve içine girin.</p>
-<p>5- <strong>BypassTPMCheck</strong>, <strong>BypassSecureBootCheck</strong>, <strong>BypassRAMCheck</strong> adında 3 tane DWORD32 oluşturun ve değerini 1 yapın</p>
-<p>6- Kuruluma devam edin</p>
+<p>### TPM ve Secure Boot Hatası Çözümü</p>
+<p>Windows 11 kurulumunda TPM ve Secure Boot hatası alıyorsanız, aşağıdaki adımları izleyerek bu sorunu çözebilirsiniz. 🚀</p>
+<ol class="arabic simple">
+<li><strong>Kuruluma başlamadan önce</strong> <cite>Shift + F10</cite> tuşlarına basın.</li>
+<li><strong>Regedit</strong> uygulamasını açın: <cite>regedit.exe</cite> yazın ve Enter'a basın.</li>
+<li><strong>HKEY_LOCAL_MACHINESYSTEMSetup</strong> yoluna gidin.</li>
+<li>Sağ tıklayıp <strong>Yeni</strong> kısmından <strong>LabConfig</strong> adında bir anahtar oluşturun ve içine girin.</li>
+<li><strong>BypassTPMCheck</strong>, <strong>BypassSecureBootCheck</strong>, <strong>BypassRAMCheck</strong> adında 3 tane <strong>DWORD (32-bit)</strong> oluşturun ve değerini <strong>1</strong> yapın.</li>
+<li>Kuruluma devam edin. 🎉</li>
+</ol>
 <p>---</p>
 <p>## Virtio Yükleme 🚀</p>
 <p>Virtio sürücülerini yüklemek, çözünürlük ve performans sorunlarını gidermek için önemlidir.</p>
@@ -441,19 +443,19 @@ Winzort 11 kurulumunda sorun çıkartırsa şunu uygulayın:</p>
 <p><a href="#system-message-3"><span class="problematic" id="problematic-3">``</span></a><cite>sh
 qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc</cite> </p>
 <div class="system-message" id="system-message-3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 100); <em><a href="#problematic-3">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 96); <em><a href="#problematic-3">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 102)</p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 98)</p>
 Unexpected indentation.</div>
 <blockquote>
 -drive id=disk0,format=qcow2,file=winzort.qcow,cache=writeback,aio=native,cache.direct=on -rtc base=localtime -bios ~/OVMF.fd -vga virtio -display none -net user,hostfwd=tcp::3389-:3389 -net nic</blockquote>
 <p><a href="#system-message-4"><span class="problematic" id="problematic-4">``</span></a><a href="#system-message-5"><span class="problematic" id="problematic-5">`</span></a></p>
 <div class="system-message" id="system-message-4">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 109); <em><a href="#problematic-4">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 105); <em><a href="#problematic-4">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-5">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 109); <em><a href="#problematic-5">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 105); <em><a href="#problematic-5">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p>Bağlanmak için [Remmina](<a class="reference external" href="https://remmina.org/">https://remmina.org/</a>) kullanabilirsiniz.</p>
 <p>Sanal makinenizi başarıyla başlattıktan sonra, Winzort'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
@@ -464,20 +466,20 @@ Herhangi bir sorunla karşılaşırsanız, dökümantasyon veya topluluk forumla
 # Debian tabanlı bir sistemde rclone yüklemek için:
 sudo apt install rclone</p>
 <div class="system-message" id="system-message-6">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 120); <em><a href="#problematic-6">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 116); <em><a href="#problematic-6">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-7">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 120); <em><a href="#problematic-7">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 116); <em><a href="#problematic-7">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p># WebDAV sunucusunu başlatmak için:
 rclone serve webdav --addr 127.0.0.1:8000 $HOME
 # 127.0.0.1 yerine 0.0.0.0 yazarsanız, tüm IP adreslerinden bağlantı kabul edilir.
 <a href="#system-message-8"><span class="problematic" id="problematic-8">``</span></a><a href="#system-message-9"><span class="problematic" id="problematic-9">`</span></a></p>
 <div class="system-message" id="system-message-8">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 124); <em><a href="#problematic-8">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 120); <em><a href="#problematic-8">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-9">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 124); <em><a href="#problematic-9">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 120); <em><a href="#problematic-9">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p>### Winzort'tan WebDAV'a Bağlanmak için: 🖥️
 1. Bilgisayarınızı açın.
