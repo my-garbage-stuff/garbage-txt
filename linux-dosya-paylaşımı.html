@@ -364,14 +364,16 @@ ul.auto-toc {
 <div class="document">
 
 
-<p>## Linux Dağıtımlarında Dosya Paylaşımı (WebDAV ile)</p>
-<p>Bu yazıda, Linux dağıtımları üzerinden WebDAV kullanarak dosya paylaşımının nasıl yapılacağını adım adım anlatacağız.</p>
-<p>### 1. Rclone Yükleyelim</p>
+<p>## Linux Dağıtımlarında Dosya Paylaşımı (WebDAV ile) 🌐</p>
+<p>Bu yazıda, Linux dağıtımları üzerinden WebDAV kullanarak dosya paylaşımının nasıl yapılacağını adım adım anlatacağız. Hadi başlayalım! 🚀</p>
+<p>---</p>
+<p>### 1. Rclone Yükleyelim 🛠️</p>
 <p>Rclone, bulut depolama ve dosya senkronizasyonu için kullanılan bir araçtır. Öncelikle, sisteminize Rclone'u yüklemeniz gerekiyor. Eğer Debian tabanlı bir dağıtım kullanıyorsanız, aşağıdaki komutu terminalde çalıştırarak Rclone'u yükleyebilirsiniz:</p>
 <p><tt class="docutils literal">`sh
 sudo apt install rclone
 `</tt></p>
-<p>### 2. Paylaşıma Açılacak Yer İçin Servis Ayarlayalım</p>
+<p>---</p>
+<p>### 2. Paylaşıma Açılacak Yer İçin Servis Ayarlayalım ⚙️</p>
 <p>Rclone ile WebDAV paylaşımı yapmak için bir yapılandırma dosyası oluşturmalısınız. Aşağıdaki adımları izleyerek gerekli ayarları yapabilirsiniz:</p>
 <ul class="simple">
 <li>Rclone yapılandırma dosyasını oluşturun:</li>
@@ -385,7 +387,8 @@ rclone config
 <li>&quot;Storage&quot; seçeneği olarak &quot;WebDAV&quot; seçin.</li>
 <li>WebDAV sunucunuzun URL'sini, kullanıcı adını ve şifresini girin.</li>
 </ul>
-<p>### 3. Servisi Etkinleştirelim</p>
+<p>---</p>
+<p>### 3. Servisi Etkinleştirelim 🚀</p>
 <p>Rclone ile oluşturduğunuz paylaşımı bir sistem servisi olarak çalıştırmak için aşağıdaki adımları izleyin:</p>
 <ul class="simple">
 <li>Rclone için bir sistem servisi dosyası oluşturun. Aşağıdaki örneği kullanarak <cite>/etc/systemd/system/rclone-share.service</cite> dosyasını oluşturun:</li>
@@ -395,10 +398,10 @@ rclone config
 Description=Rclone WebDAV Share
 After=network.target</p>
 <div class="system-message" id="system-message-1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 34); <em><a href="#problematic-1">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 40); <em><a href="#problematic-1">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-2">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 34); <em><a href="#problematic-2">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 40); <em><a href="#problematic-2">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p>[Service]
 Type=simple
@@ -408,10 +411,10 @@ Restart=on-failure</p>
 WantedBy=multi-user.target
 <a href="#system-message-3"><span class="problematic" id="problematic-3">``</span></a><a href="#system-message-4"><span class="problematic" id="problematic-4">`</span></a></p>
 <div class="system-message" id="system-message-3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 44); <em><a href="#problematic-3">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 50); <em><a href="#problematic-3">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-4">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 44); <em><a href="#problematic-4">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 50); <em><a href="#problematic-4">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <ul class="simple">
 <li>Servisi etkinleştirin ve başlatın:</li>
@@ -421,24 +424,26 @@ Inline interpreted text or phrase reference start-string without end-string.</di
 sudo systemctl enable <span class="pre">rclone-share.service</span>
 sudo systemctl start <span class="pre">rclone-share.service</span>
 `</tt></p>
-<p>### 4. Paylaşımı Test Edelim</p>
+<p>---</p>
+<p>### 4. Paylaşımı Test Edelim ✅</p>
 <p>WebDAV paylaşımınızın çalışıp çalışmadığını test etmek için bir WebDAV istemcisi veya tarayıcı kullanarak <cite>http://&lt;sunucu_ip&gt;:8080</cite> adresine gidin. Eğer her şey doğru ayarlandıysa, dosya paylaşımınıza erişebilmelisiniz.</p>
-<p>Bu adımları takip ederek Linux dağıtımınızda WebDAV ile dosya paylaşımını başarıyla gerçekleştirebilirsiniz.</p>
-<p>## Bağlantının Eklenmesi</p>
+<p>Bu adımları takip ederek Linux dağıtımınızda WebDAV ile dosya paylaşımını başarıyla gerçekleştirebilirsiniz. 🎉</p>
+<p>---</p>
+<p>## Bağlantının Eklenmesi 🔗</p>
 <p>Linux üzerinde WebDAV bağlantısını eklemek için birkaç farklı yöntem bulunmaktadır. Aşağıda, hem dosya yöneticisi hem de terminal üzerinden nasıl bağlantı ekleyeceğinizi açıklayacağım.</p>
-<p>### 1. Linux Dosya Yöneticisi ile Bağlantı Ekleme</p>
+<p>### 1. Linux Dosya Yöneticisi ile Bağlantı Ekleme 🖥️</p>
 <p>Linux dosya yöneticinizin adres çubuğuna gidin ve aşağıdaki formatta bağlantıyı girin:</p>
 <p><tt class="docutils literal">`
 <span class="pre">dav://&lt;sunucu_ip&gt;:8080</span>
 `</tt></p>
 <p>Bu adresi girdikten sonra <strong>Enter</strong> tuşuna basın. Bağlantı başarıyla eklenmiş olacaktır ve dosya yöneticiniz üzerinden paylaşıma erişebilirsiniz.</p>
-<p>### 2. Terminal Üzerinden Bağlantı Ekleme</p>
+<p>### 2. Terminal Üzerinden Bağlantı Ekleme 💻</p>
 <p>Terminal üzerinden WebDAV bağlantısını eklemek için <cite>gio</cite> komutunu kullanabilirsiniz. Aşağıdaki komutu terminalde çalıştırın:</p>
 <p><tt class="docutils literal">`sh
 gio mount <span class="pre">dav://&lt;sunucu_ip&gt;:8080</span>
 `</tt></p>
 <p>Bu komut, belirtilen WebDAV bağlantısını sisteminize ekleyecektir.</p>
-<p>### 3. Windows Tarafında Bağlantı Ekleme</p>
+<p>### 3. Windows Tarafında Bağlantı Ekleme 🖥️</p>
 <p>Windows işletim sisteminde WebDAV bağlantısını eklemek için şu adımları izleyin:</p>
 <ol class="arabic simple">
 <li><strong>Bilgisayarım</strong> (veya <strong>Bu Bilgisayar</strong>) klasörünü açın.</li>
@@ -451,7 +456,7 @@ gio mount <span class="pre">dav://&lt;sunucu_ip&gt;:8080</span>
 <ol class="arabic simple" start="4">
 <li>Ardından <strong>Tamam</strong> butonuna basın.</li>
 </ol>
-<p>Bu adımları takip ederek, Windows işletim sisteminde de WebDAV bağlantısını başarıyla ekleyebilirsiniz. Herhangi bir sorunla karşılaşırsanız, bağlantı ayarlarınızı ve ağ bağlantınızı kontrol etmeyi unutmayın.</p>
+<p>Bu adımları takip ederek Windows işletim sisteminde de WebDAV bağlantısını başarıyla ekleyebilirsiniz. Herhangi bir sorunla karşılaşırsanız, bağlantı ayarlarınızı ve ağ bağlantınızı kontrol etmeyi unutmayın. 🔍</p>
 </div>
 </body>
 </html>
