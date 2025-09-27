@@ -95,23 +95,28 @@ qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc` \
 
 Bağlanmak için [Remmina](https://remmina.org/) kullanabilirsiniz.
 
-## Dosya paylaşımı
-Ana makinada [rclone](https://rclone.org/) kullanarak webdav server başlatabilirsiniz. sanal makina `10.0.2.2` ip adresi olarak ana makinayla ağ bağlantısına sahiptir.
-
-```sh
-# debiansa apt install rclone
-rclone serve webdav --addr 127.0.0.1:8000 /
-# 127.0.0.1 yerine 0.0.0.0 yazarsanız önüne gelen bağlanır.
-```
-
-### Winzorttan webdava bağlanmak için:
-1- bilgisayarımı açın
-
-2- map network drive tuşuna basın
-
-3- adres yerine `http://10.0.2.2:8000` yazın
-
-4- kaydedin.
-
 Sanal makinenizi başarıyla başlattıktan sonra, Windows'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
 Herhangi bir sorunla karşılaşırsanız, dökümantasyon veya topluluk forumlarından yardım almayı unutmayın. İyi çalışmalar! 🎊
+
+## Dosya Paylaşımı 🚀
+
+Ana makinada **rclone** kullanarak WebDAV sunucusu başlatabilirsiniz. Sanal makinanızın **10.0.2.2** IP adresi ile ana makinayla ağ bağlantısı bulunmaktadır.
+
+```sh
+# Debian tabanlı bir sistemde rclone yüklemek için:
+apt install rclone
+
+# WebDAV sunucusunu başlatmak için:
+rclone serve webdav --addr 127.0.0.1:8000 /
+# 127.0.0.1 yerine 0.0.0.0 yazarsanız, tüm IP adreslerinden bağlantı kabul edilir.
+```
+
+### Winzort'tan WebDAV'a Bağlanmak için: 🖥️
+1. Bilgisayarınızı açın.
+2. "Map Network Drive" tuşuna basın.
+3. Adres kısmına `http://10.0.2.2:8000` yazın.
+4. Kaydedin ve bağlantınızı oluşturun! 🎉
+
+Artık dosyalarınıza kolayca erişebilir ve paylaşabilirsiniz! 😊
+
+
