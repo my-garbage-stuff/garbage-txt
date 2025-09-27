@@ -13,7 +13,7 @@ Windows işletim sistemini QEMU üzerinde kurmak için aşağıdaki adımları t
 
 2. **Boş Alan Ayırma**: En az **50 GB** boş alan ayırın. Bu, Windows'un düzgün çalışması için idealdir. 💾
 
-3. **Windows ISO İndirme**: Windows'un LTSC sürümünü indirin. Bu sürüm, gereksiz bileşenlerden kaçınmanıza yardımcı olur. 📥
+3. **Windows ISO İndirme**: Windows'un LTSC sürümünü [indirin](https://archive.org/details/windows_11_enterprise_ltsc_2024). Bu sürüm, gereksiz bileşenlerden kaçınmanıza yardımcı olur. 📥
 
 4. **Besmele Çekme**: Kurulum öncesi bir motivasyon kaynağı olarak besmele çekin. 🙏
 
