@@ -1,6 +1,6 @@
-## QEMU ile Windows Kurulumu ve Ayarlanması 🖥️
+## QEMU ile Winzort Kurulumu ve Ayarlanması 🖥️
 
-Windows işletim sistemini QEMU üzerinde kurmak için aşağıdaki adımları takip edebilirsiniz. Bu rehber, adım adım ilerleyerek gerekli hazırlıkları ve ayarları içermektedir.
+Winzort işletim sistemini QEMU üzerinde kurmak için aşağıdaki adımları takip edebilirsiniz. Bu rehber, adım adım ilerleyerek gerekli hazırlıkları ve ayarları içermektedir.
 
 ---
 
@@ -11,9 +11,9 @@ Windows işletim sistemini QEMU üzerinde kurmak için aşağıdaki adımları t
    sudo apt install qemu-kvm
    ```
 
-2. **Boş Alan Ayırma**: En az **50 GB** boş alan ayırın. Bu, Windows'un düzgün çalışması için idealdir. 💾
+2. **Boş Alan Ayırma**: En az **50 GB** boş alan ayırın. Bu, Winzort'un düzgün çalışması için idealdir. 💾
 
-3. **Windows ISO İndirme**: Windows'un LTSC sürümünü [indirin](https://archive.org/details/windows_11_enterprise_ltsc_2024). Bu sürüm, gereksiz bileşenlerden kaçınmanıza yardımcı olur. 📥
+3. **Winzort ISO İndirme**: Winzort'un LTSC sürümünü [indirin](https://archive.org/details/windows_11_enterprise_ltsc_2024). Bu sürüm, gereksiz bileşenlerden kaçınmanıza yardımcı olur. 📥
 
 4. **Besmele Çekme**: Kurulum öncesi bir motivasyon kaynağı olarak besmele çekin. 🙏
 
@@ -29,9 +29,9 @@ qemu-img create -f qcow2 ~/winzort.qcow 50G
 
 ---
 
-## Windows Kurulumu 🏗️
+## Winzort Kurulumu 🏗️
 
-Windows kurulumunu başlatmak için aşağıdaki komutu kullanın. Bu komut, ISO dosyasını ve disk imajını göstererek internetsiz bir kurulum yapmanızı sağlar. UEFI kurulumunu gerçekleştirmek için OVMF dosyasını indirmeniz gerekecek.
+Winzort kurulumunu başlatmak için aşağıdaki komutu kullanın. Bu komut, ISO dosyasını ve disk imajını göstererek internetsiz bir kurulum yapmanızı sağlar. UEFI kurulumunu gerçekleştirmek için OVMF dosyasını indirmeniz gerekecek.
 
 ```sh
 # OVMF.fd dosyasını indirin
@@ -57,14 +57,14 @@ Virtio sürücülerini yüklemek, çözünürlük ve performans sorunlarını gi
 1. **Sanal Makineyi Kapatın**. 📴
 2. **Virtio ISO'sunu İndirin**: Aşağıdaki bağlantıdan uygun sürümün ISO dosyasını indirin ve CD-ROM olarak bağlayın:
    [Virtio Sürücü İndirme](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/)
-3. **Windows'u Başlatın** ve sürücüleri ve misafir araçlarını yükleyin. 💻
+3. **Winzort'u Başlatın** ve sürücüleri ve misafir araçlarını yükleyin. 💻
 4. **Sanal Makinayı Yeniden Başlatın**. 🔄
 
 ---
 
 ## Edge ve Defender'ı Kaldırma ❌
 
-Windows Defender, performansı olumsuz etkileyebilir. Bu nedenle kapatılması önerilir. Defender'ı kaldırmak için aşağıdaki bağlantıyı kullanabilirsiniz:
+Winzort Defender, performansı olumsuz etkileyebilir. Bu nedenle kapatılması önerilir. Defender'ı kaldırmak için aşağıdaki bağlantıyı kullanabilirsiniz:
 [Defender Sikici](https://github.com/ionuttbara/windows-defender-remover)
 
 Ayrıca, Edge tarayıcısını kaldırıp Firefox yüklemek için şu bağlantıyı kullanabilirsiniz:
@@ -74,7 +74,7 @@ Ayrıca, Edge tarayıcısını kaldırıp Firefox yüklemek için şu bağlantı
 
 ## RDP Ayarlama 🔧
 
-Windows'un ayarlarından RDP (Uzak Masaüstü Protokolü) servisini açın. Ayarları bulmak için menülerde gezinin.
+Winzort'un ayarlarından RDP (Uzak Masaüstü Protokolü) servisini açın. Ayarları bulmak için menülerde gezinin.
 
 ---
 
@@ -95,7 +95,7 @@ qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc` \
 
 Bağlanmak için [Remmina](https://remmina.org/) kullanabilirsiniz.
 
-Sanal makinenizi başarıyla başlattıktan sonra, Windows'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
+Sanal makinenizi başarıyla başlattıktan sonra, Winzort'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
 Herhangi bir sorunla karşılaşırsanız, dökümantasyon veya topluluk forumlarından yardım almayı unutmayın. İyi çalışmalar! 🎊
 
 ## Dosya Paylaşımı 🚀
