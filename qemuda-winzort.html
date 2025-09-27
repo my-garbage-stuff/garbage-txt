@@ -364,8 +364,8 @@ ul.auto-toc {
 <div class="document">
 
 
-<p>## QEMU ile Windows Kurulumu ve Ayarlanması 🖥️</p>
-<p>Windows işletim sistemini QEMU üzerinde kurmak için aşağıdaki adımları takip edebilirsiniz. Bu rehber, adım adım ilerleyerek gerekli hazırlıkları ve ayarları içermektedir.</p>
+<p>## QEMU ile Winzort Kurulumu ve Ayarlanması 🖥️</p>
+<p>Winzort işletim sistemini QEMU üzerinde kurmak için aşağıdaki adımları takip edebilirsiniz. Bu rehber, adım adım ilerleyerek gerekli hazırlıkları ve ayarları içermektedir.</p>
 <p>---</p>
 <p>## Hazırlık 🛠️</p>
 <ol class="arabic simple">
@@ -373,8 +373,8 @@ ul.auto-toc {
 <tt class="docutils literal">`sh
 sudo apt install <span class="pre">qemu-kvm</span>
 `</tt></li>
-<li><strong>Boş Alan Ayırma</strong>: En az <strong>50 GB</strong> boş alan ayırın. Bu, Windows'un düzgün çalışması için idealdir. 💾</li>
-<li><strong>Windows ISO İndirme</strong>: Windows'un LTSC sürümünü [indirin](<a class="reference external" href="https://archive.org/details/windows_11_enterprise_ltsc_2024">https://archive.org/details/windows_11_enterprise_ltsc_2024</a>). Bu sürüm, gereksiz bileşenlerden kaçınmanıza yardımcı olur. 📥</li>
+<li><strong>Boş Alan Ayırma</strong>: En az <strong>50 GB</strong> boş alan ayırın. Bu, Winzort'un düzgün çalışması için idealdir. 💾</li>
+<li><strong>Winzort ISO İndirme</strong>: Winzort'un LTSC sürümünü [indirin](<a class="reference external" href="https://archive.org/details/windows_11_enterprise_ltsc_2024">https://archive.org/details/windows_11_enterprise_ltsc_2024</a>). Bu sürüm, gereksiz bileşenlerden kaçınmanıza yardımcı olur. 📥</li>
 <li><strong>Besmele Çekme</strong>: Kurulum öncesi bir motivasyon kaynağı olarak besmele çekin. 🙏</li>
 </ol>
 <p>---</p>
@@ -385,8 +385,8 @@ sudo apt install <span class="pre">qemu-kvm</span>
 <span class="pre">qemu-img</span> create <span class="pre">-f</span> qcow2 ~/winzort.qcow 50G
 `</tt></p>
 <p>---</p>
-<p>## Windows Kurulumu 🏗️</p>
-<p>Windows kurulumunu başlatmak için aşağıdaki komutu kullanın. Bu komut, ISO dosyasını ve disk imajını göstererek internetsiz bir kurulum yapmanızı sağlar. UEFI kurulumunu gerçekleştirmek için OVMF dosyasını indirmeniz gerekecek.</p>
+<p>## Winzort Kurulumu 🏗️</p>
+<p>Winzort kurulumunu başlatmak için aşağıdaki komutu kullanın. Bu komut, ISO dosyasını ve disk imajını göstererek internetsiz bir kurulum yapmanızı sağlar. UEFI kurulumunu gerçekleştirmek için OVMF dosyasını indirmeniz gerekecek.</p>
 <p><a href="#system-message-1"><span class="problematic" id="problematic-1">``</span></a><cite>sh
 # OVMF.fd dosyasını indirin
 # https://github.com/clearlinux/common/blob/master/OVMF.fd
@@ -415,18 +415,18 @@ Inline literal start-string without end-string.</div>
 <li><strong>Sanal Makineyi Kapatın</strong>. 📴</li>
 <li><strong>Virtio ISO'sunu İndirin</strong>: Aşağıdaki bağlantıdan uygun sürümün ISO dosyasını indirin ve CD-ROM olarak bağlayın:
 [Virtio Sürücü İndirme](<a class="reference external" href="https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/">https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/</a>)</li>
-<li><strong>Windows'u Başlatın</strong> ve sürücüleri ve misafir araçlarını yükleyin. 💻</li>
+<li><strong>Winzort'u Başlatın</strong> ve sürücüleri ve misafir araçlarını yükleyin. 💻</li>
 <li><strong>Sanal Makinayı Yeniden Başlatın</strong>. 🔄</li>
 </ol>
 <p>---</p>
 <p>## Edge ve Defender'ı Kaldırma ❌</p>
-<p>Windows Defender, performansı olumsuz etkileyebilir. Bu nedenle kapatılması önerilir. Defender'ı kaldırmak için aşağıdaki bağlantıyı kullanabilirsiniz:
+<p>Winzort Defender, performansı olumsuz etkileyebilir. Bu nedenle kapatılması önerilir. Defender'ı kaldırmak için aşağıdaki bağlantıyı kullanabilirsiniz:
 [Defender Sikici](<a class="reference external" href="https://github.com/ionuttbara/windows-defender-remover">https://github.com/ionuttbara/windows-defender-remover</a>)</p>
 <p>Ayrıca, Edge tarayıcısını kaldırıp Firefox yüklemek için şu bağlantıyı kullanabilirsiniz:
 [Edge Sikici](<a class="reference external" href="https://github.com/ionuttbara/edge-remover">https://github.com/ionuttbara/edge-remover</a>)</p>
 <p>---</p>
 <p>## RDP Ayarlama 🔧</p>
-<p>Windows'un ayarlarından RDP (Uzak Masaüstü Protokolü) servisini açın. Ayarları bulmak için menülerde gezinin.</p>
+<p>Winzort'un ayarlarından RDP (Uzak Masaüstü Protokolü) servisini açın. Ayarları bulmak için menülerde gezinin.</p>
 <p>---</p>
 <p>## Sanal Makinenin Nihai Parametreleri ile Başlatma 🎉</p>
 <p>Sanal makinayı başlatmak için <cite>run.sh</cite> adında bir dosya oluşturun ve aşağıdaki komutları ekleyin:</p>
@@ -448,7 +448,7 @@ Inline literal start-string without end-string.</div>
 <p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 94); <em><a href="#problematic-5">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p>Bağlanmak için [Remmina](<a class="reference external" href="https://remmina.org/">https://remmina.org/</a>) kullanabilirsiniz.</p>
-<p>Sanal makinenizi başarıyla başlattıktan sonra, Windows'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
+<p>Sanal makinenizi başarıyla başlattıktan sonra, Winzort'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
 Herhangi bir sorunla karşılaşırsanız, dökümantasyon veya topluluk forumlarından yardım almayı unutmayın. İyi çalışmalar! 🎊</p>
 <p>## Dosya Paylaşımı 🚀</p>
 <p>Ana makinada <strong>rclone</strong> kullanarak WebDAV sunucusu başlatabilirsiniz. Sanal makinanızın <strong>10.0.2.2</strong> IP adresi ile ana makinayla ağ bağlantısı bulunmaktadır.</p>
