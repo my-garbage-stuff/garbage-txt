@@ -104,10 +104,10 @@ Ana makinada **rclone** kullanarak WebDAV sunucusu başlatabilirsiniz. Sanal mak
 
 ```sh
 # Debian tabanlı bir sistemde rclone yüklemek için:
-apt install rclone
+sudo apt install rclone
 
 # WebDAV sunucusunu başlatmak için:
-rclone serve webdav --addr 127.0.0.1:8000 /
+rclone serve webdav --addr 127.0.0.1:8000 $HOME
 # 127.0.0.1 yerine 0.0.0.0 yazarsanız, tüm IP adreslerinden bağlantı kabul edilir.
 ```
 
