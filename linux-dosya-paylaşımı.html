@@ -373,22 +373,7 @@ ul.auto-toc {
 sudo apt install rclone
 `</tt></p>
 <p>---</p>
-<p>### 2. Paylaşıma Açılacak Yer İçin Servis Ayarlayalım ⚙️</p>
-<p>Rclone ile WebDAV paylaşımı yapmak için bir yapılandırma dosyası oluşturmalısınız. Aşağıdaki adımları izleyerek gerekli ayarları yapabilirsiniz:</p>
-<ul class="simple">
-<li>Rclone yapılandırma dosyasını oluşturun:</li>
-</ul>
-<p><tt class="docutils literal">`sh
-rclone config
-`</tt></p>
-<ul class="simple">
-<li>Bu komut, sizi bir dizi menüye yönlendirecek. Burada yeni bir &quot;remote&quot; (uzak bağlantı) oluşturmak için &quot;n&quot; tuşuna basın.</li>
-<li>Paylaşım için bir isim verin (örneğin, <cite>webdav</cite>).</li>
-<li>&quot;Storage&quot; seçeneği olarak &quot;WebDAV&quot; seçin.</li>
-<li>WebDAV sunucunuzun URL'sini, kullanıcı adını ve şifresini girin.</li>
-</ul>
-<p>---</p>
-<p>### 3. Servisi Etkinleştirelim 🚀</p>
+<p>### 2. Servisi Etkinleştirelim 🚀</p>
 <p>Rclone ile oluşturduğunuz paylaşımı bir sistem servisi olarak çalıştırmak için aşağıdaki adımları izleyin:</p>
 <ul class="simple">
 <li>Rclone için bir sistem servisi dosyası oluşturun. Aşağıdaki örneği kullanarak <cite>/etc/systemd/system/rclone-share.service</cite> dosyasını oluşturun:</li>
@@ -398,10 +383,10 @@ rclone config
 Description=Rclone WebDAV Share
 After=network.target</p>
 <div class="system-message" id="system-message-1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 40); <em><a href="#problematic-1">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 23); <em><a href="#problematic-1">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-2">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 40); <em><a href="#problematic-2">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 23); <em><a href="#problematic-2">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p>[Service]
 Type=simple
@@ -411,10 +396,10 @@ Restart=on-failure</p>
 WantedBy=multi-user.target
 <a href="#system-message-3"><span class="problematic" id="problematic-3">``</span></a><a href="#system-message-4"><span class="problematic" id="problematic-4">`</span></a></p>
 <div class="system-message" id="system-message-3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 50); <em><a href="#problematic-3">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 33); <em><a href="#problematic-3">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-4">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 50); <em><a href="#problematic-4">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 33); <em><a href="#problematic-4">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <ul class="simple">
 <li>Servisi etkinleştirin ve başlatın:</li>
@@ -425,7 +410,7 @@ sudo systemctl enable <span class="pre">rclone-share.service</span>
 sudo systemctl start <span class="pre">rclone-share.service</span>
 `</tt></p>
 <p>---</p>
-<p>### 4. Paylaşımı Test Edelim ✅</p>
+<p>### 3. Paylaşımı Test Edelim ✅</p>
 <p>WebDAV paylaşımınızın çalışıp çalışmadığını test etmek için bir WebDAV istemcisi veya tarayıcı kullanarak <cite>http://&lt;sunucu_ip&gt;:8080</cite> adresine gidin. Eğer her şey doğru ayarlandıysa, dosya paylaşımınıza erişebilmelisiniz.</p>
 <p>Bu adımları takip ederek Linux dağıtımınızda WebDAV ile dosya paylaşımını başarıyla gerçekleştirebilirsiniz. 🎉</p>
 <p>---</p>
