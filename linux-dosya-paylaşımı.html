@@ -424,6 +424,34 @@ sudo systemctl start <span class="pre">rclone-share.service</span>
 <p>### 4. Paylaşımı Test Edelim</p>
 <p>WebDAV paylaşımınızın çalışıp çalışmadığını test etmek için bir WebDAV istemcisi veya tarayıcı kullanarak <cite>http://&lt;sunucu_ip&gt;:8080</cite> adresine gidin. Eğer her şey doğru ayarlandıysa, dosya paylaşımınıza erişebilmelisiniz.</p>
 <p>Bu adımları takip ederek Linux dağıtımınızda WebDAV ile dosya paylaşımını başarıyla gerçekleştirebilirsiniz.</p>
+<p>## Bağlantının Eklenmesi</p>
+<p>Linux üzerinde WebDAV bağlantısını eklemek için birkaç farklı yöntem bulunmaktadır. Aşağıda, hem dosya yöneticisi hem de terminal üzerinden nasıl bağlantı ekleyeceğinizi açıklayacağım.</p>
+<p>### 1. Linux Dosya Yöneticisi ile Bağlantı Ekleme</p>
+<p>Linux dosya yöneticinizin adres çubuğuna gidin ve aşağıdaki formatta bağlantıyı girin:</p>
+<p><tt class="docutils literal">`
+<span class="pre">dav://&lt;sunucu_ip&gt;:8080</span>
+`</tt></p>
+<p>Bu adresi girdikten sonra <strong>Enter</strong> tuşuna basın. Bağlantı başarıyla eklenmiş olacaktır ve dosya yöneticiniz üzerinden paylaşıma erişebilirsiniz.</p>
+<p>### 2. Terminal Üzerinden Bağlantı Ekleme</p>
+<p>Terminal üzerinden WebDAV bağlantısını eklemek için <cite>gio</cite> komutunu kullanabilirsiniz. Aşağıdaki komutu terminalde çalıştırın:</p>
+<p><tt class="docutils literal">`sh
+gio mount <span class="pre">dav://&lt;sunucu_ip&gt;:8080</span>
+`</tt></p>
+<p>Bu komut, belirtilen WebDAV bağlantısını sisteminize ekleyecektir.</p>
+<p>### 3. Windows Tarafında Bağlantı Ekleme</p>
+<p>Windows işletim sisteminde WebDAV bağlantısını eklemek için şu adımları izleyin:</p>
+<ol class="arabic simple">
+<li><strong>Bilgisayarım</strong> (veya <strong>Bu Bilgisayar</strong>) klasörünü açın.</li>
+<li>Üst menüde bulunan <strong>Ağ sürücüsü bağla</strong> (Map network drive) seçeneğine tıklayın.</li>
+<li>Açılan pencerede <strong>Klasör</strong> kısmına aşağıdaki adresi yazın:</li>
+</ol>
+<p><tt class="docutils literal">`
+<span class="pre">http://&lt;sunucu_ip&gt;:8080</span>
+`</tt></p>
+<ol class="arabic simple" start="4">
+<li>Ardından <strong>Tamam</strong> butonuna basın.</li>
+</ol>
+<p>Bu adımları takip ederek, Windows işletim sisteminde de WebDAV bağlantısını başarıyla ekleyebilirsiniz. Herhangi bir sorunla karşılaşırsanız, bağlantı ayarlarınızı ve ağ bağlantınızı kontrol etmeyi unutmayın.</p>
 </div>
 </body>
 </html>
