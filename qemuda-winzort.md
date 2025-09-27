@@ -1,9 +1,13 @@
 # Qemu ile winzort kurulumu ve ayarlanması
 ## Hazırlık
-1- qemu yoksa kurun
-2- boşta alan ayırın
+1- qemu yoksa kurun (debian kullanıyorsan `apt install qemu-kvm`)
+
+2- boşta alan ayırın (50gb ve üstü ideal)
+
 3- winzort isosu indirin (ltsc olsa daha iyi olur. daha az çöple uğraşırsınız)
+
 3- besmele çekin
+
 ## Disk imajı hazırlanması
 ```sh
 # disk imajı oluşturun
