@@ -439,7 +439,7 @@ Inline literal start-string without end-string.</div>
 <p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 87)</p>
 Unexpected indentation.</div>
 <blockquote>
--drive id=disk0,format=qcow2,file=~/winzort.qcow,cache=writeback,aio=native,cache.direct=on -rtc base=localtime -bios ~/OVMF.fd -vga virtio -display none -netdev user,id=net0,hostfwd=tcp::33899-:3389 -device e1000,netdev</blockquote>
+-drive id=disk0,format=qcow2,file=winzort.qcow,cache=writeback,aio=native,cache.direct=on -rtc base=localtime -bios ~/OVMF.fd -vga virtio -display none -net user,hostfwd=tcp::3389-:3389 -net nic</blockquote>
 <p><a href="#system-message-4"><span class="problematic" id="problematic-4">``</span></a><a href="#system-message-5"><span class="problematic" id="problematic-5">`</span></a></p>
 <div class="system-message" id="system-message-4">
 <p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 94); <em><a href="#problematic-4">backlink</a></em></p>
