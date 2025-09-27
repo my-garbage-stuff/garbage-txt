@@ -452,7 +452,8 @@ Inline interpreted text or phrase reference start-string without end-string.</di
 Ana makinada [rclone](<a class="reference external" href="https://rclone.org/">https://rclone.org/</a>) kullanarak webdav server başlatabilirsiniz. sanal makina <cite>10.0.2.2</cite> ip adresi olarak ana makinayla ağ bağlantısına sahiptir.</p>
 <p><tt class="docutils literal">`sh
 # debiansa apt install rclone
-rclone serve webdav <span class="pre">--addr</span> 0.0.0.0:8000 /
+rclone serve webdav <span class="pre">--addr</span> 127.0.0.1:8000 /
+# 127.0.0.1 yerine 0.0.0.0 yazarsanız önüne gelen bağlanır.
 `</tt></p>
 <p>### Winzorttan webdava bağlanmak için:
 1- bilgisayarımı açın
