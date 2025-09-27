@@ -84,12 +84,12 @@ Sanal makinayı başlatmak için `run.sh` adında bir dosya oluşturun ve aşağ
 
 ```sh
 qemu-system-x86_64 --enable-kvm -m 8G -smp `nproc` \
-  -drive id=disk0,format=qcow2,file=~/winzort.qcow,cache=writeback,aio=native,cache.direct=on \
+  -drive id=disk0,format=qcow2,file=winzort.qcow,cache=writeback,aio=native,cache.direct=on \
   -rtc base=localtime \
   -bios ~/OVMF.fd \
   -vga virtio \
   -display none \
-  -netdev user,id=net0,hostfwd=tcp::33899-:3389 -device e1000,netdev
+  -net user,hostfwd=tcp::3389-:3389 -net nic
 
 ```
 
