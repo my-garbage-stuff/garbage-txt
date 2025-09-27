@@ -50,7 +50,7 @@ Kurulum tamamlandıktan sonra `-net none` parametresine artık ihtiyaç duymayac
 
 ### TPM ve Secure Boot Hatası Çözümü
 
-Windows 11 kurulumunda TPM ve Secure Boot hatası alıyorsanız, aşağıdaki adımları izleyerek bu sorunu çözebilirsiniz. 🚀
+Winzort 11 kurulumunda TPM ve Secure Boot hatası alıyorsanız, aşağıdaki adımları izleyerek bu sorunu çözebilirsiniz. 🚀
 
 1. **Kuruluma başlamadan önce** `Shift + F10` tuşlarına basın.
 2. **Regedit** uygulamasını açın: `regedit.exe` yazın ve Enter'a basın.
