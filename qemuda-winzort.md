@@ -57,9 +57,11 @@ Winzort 11 kurulumunda sorun çıkartırsa şunu uygulayın:
 
 3- HKEY_LOCAL_MACHINE\SYSTEM\Setup kısmına gelin
 
-4- **BypassTPMCheck**, **BypassSecureBootCheck**, **BypassRAMCheck** adında 3 tane DWORD32 oluşturun ve değerini 1 yapın
+4- sağ tıklayıp yeni kısmından **LabConfig** adında bir key oluşturun. ve içine girin.
 
-5- Kuruluma devam edin
+5- **BypassTPMCheck**, **BypassSecureBootCheck**, **BypassRAMCheck** adında 3 tane DWORD32 oluşturun ve değerini 1 yapın
+
+6- Kuruluma devam edin
 
 ---
 
