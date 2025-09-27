@@ -65,10 +65,10 @@ Virtio sürücülerini yüklemek, çözünürlük ve performans sorunlarını gi
 ## Edge ve Defender'ı Kaldırma ❌
 
 Windows Defender, performansı olumsuz etkileyebilir. Bu nedenle kapatılması önerilir. Defender'ı kaldırmak için aşağıdaki bağlantıyı kullanabilirsiniz:
-[Defender Kaldırıcı](https://github.com/ionuttbara/windows-defender-remover)
+[Defender Sikici](https://github.com/ionuttbara/windows-defender-remover)
 
 Ayrıca, Edge tarayıcısını kaldırıp Firefox yüklemek için şu bağlantıyı kullanabilirsiniz:
-[Edge Kaldırıcı](https://github.com/ionuttbara/edge-remover)
+[Edge Sikici](https://github.com/ionuttbara/edge-remover)
 
 ---
 
