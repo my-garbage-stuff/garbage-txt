@@ -38,7 +38,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/rclone serve webdav webdav: --addr 0.0.0.0:8080
+ExecStart=/usr/bin/rclone serve webdav --addr 0.0.0.0:8080 /paylasilan
 Restart=on-failure
 
 [Install]
