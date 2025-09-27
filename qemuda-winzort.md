@@ -106,8 +106,11 @@ rclone serve webdav --addr 127.0.0.1:8000 /
 
 ### Winzorttan webdava bağlanmak için:
 1- bilgisayarımı açın
+
 2- map network drive tuşuna basın
+
 3- adres yerine `http://10.0.2.2:8000` yazın
+
 4- kaydedin.
 
 Sanal makinenizi başarıyla başlattıktan sonra, Windows'un keyfini çıkarabilir ve ihtiyaçlarınıza göre özelleştirebilirsiniz.
