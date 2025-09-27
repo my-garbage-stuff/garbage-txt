@@ -48,6 +48,19 @@ Kurulum sırasında diskin tamamını kullanın ve oturum açmayın. 🚫
 
 Kurulum tamamlandıktan sonra `-net none` parametresine artık ihtiyaç duymayacaksınız.
 
+### TPM ve Secureboot hatası çözümü
+Winzort 11 kurulumunda sorun çıkartırsa şunu uygulayın:
+
+1- kuruluma başlamadan önce `Shift F10` yapın
+
+2- regedit.exe açın
+
+3- HKEY_LOCAL_MACHINE\SYSTEM\Setup kısmına gelin
+
+4- **BypassTPMCheck**, **BypassSecureBootCheck**, **BypassRAMCheck** adında 3 tane DWORD32 oluşturun ve değerini 1 yapın
+
+5- Kuruluma devam edin
+
 ---
 
 ## Virtio Yükleme 🚀
