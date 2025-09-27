@@ -59,6 +59,43 @@ WebDAV paylaşımınızın çalışıp çalışmadığını test etmek için bir
 
 Bu adımları takip ederek Linux dağıtımınızda WebDAV ile dosya paylaşımını başarıyla gerçekleştirebilirsiniz.
 
+## Bağlantının Eklenmesi
 
+Linux üzerinde WebDAV bağlantısını eklemek için birkaç farklı yöntem bulunmaktadır. Aşağıda, hem dosya yöneticisi hem de terminal üzerinden nasıl bağlantı ekleyeceğinizi açıklayacağım.
 
+### 1. Linux Dosya Yöneticisi ile Bağlantı Ekleme
+
+Linux dosya yöneticinizin adres çubuğuna gidin ve aşağıdaki formatta bağlantıyı girin:
+
+```
+dav://<sunucu_ip>:8080
+```
+
+Bu adresi girdikten sonra **Enter** tuşuna basın. Bağlantı başarıyla eklenmiş olacaktır ve dosya yöneticiniz üzerinden paylaşıma erişebilirsiniz.
+
+### 2. Terminal Üzerinden Bağlantı Ekleme
+
+Terminal üzerinden WebDAV bağlantısını eklemek için `gio` komutunu kullanabilirsiniz. Aşağıdaki komutu terminalde çalıştırın:
+
+```sh
+gio mount dav://<sunucu_ip>:8080
+```
+
+Bu komut, belirtilen WebDAV bağlantısını sisteminize ekleyecektir.
+
+### 3. Windows Tarafında Bağlantı Ekleme
+
+Windows işletim sisteminde WebDAV bağlantısını eklemek için şu adımları izleyin:
+
+1. **Bilgisayarım** (veya **Bu Bilgisayar**) klasörünü açın.
+2. Üst menüde bulunan **Ağ sürücüsü bağla** (Map network drive) seçeneğine tıklayın.
+3. Açılan pencerede **Klasör** kısmına aşağıdaki adresi yazın:
+
+```
+http://<sunucu_ip>:8080
+```
+
+4. Ardından **Tamam** butonuna basın.
+
+Bu adımları takip ederek, Windows işletim sisteminde de WebDAV bağlantısını başarıyla ekleyebilirsiniz. Herhangi bir sorunla karşılaşırsanız, bağlantı ayarlarınızı ve ağ bağlantınızı kontrol etmeyi unutmayın.
 
