@@ -48,20 +48,16 @@ Kurulum sırasında diskin tamamını kullanın ve oturum açmayın. 🚫
 
 Kurulum tamamlandıktan sonra `-net none` parametresine artık ihtiyaç duymayacaksınız.
 
-### TPM ve Secureboot hatası çözümü
-Winzort 11 kurulumunda sorun çıkartırsa şunu uygulayın:
+### TPM ve Secure Boot Hatası Çözümü
 
-1- kuruluma başlamadan önce `Shift F10` yapın
+Windows 11 kurulumunda TPM ve Secure Boot hatası alıyorsanız, aşağıdaki adımları izleyerek bu sorunu çözebilirsiniz. 🚀
 
-2- regedit.exe açın
-
-3- HKEY_LOCAL_MACHINE\SYSTEM\Setup kısmına gelin
-
-4- sağ tıklayıp yeni kısmından **LabConfig** adında bir key oluşturun. ve içine girin.
-
-5- **BypassTPMCheck**, **BypassSecureBootCheck**, **BypassRAMCheck** adında 3 tane DWORD32 oluşturun ve değerini 1 yapın
-
-6- Kuruluma devam edin
+1. **Kuruluma başlamadan önce** `Shift + F10` tuşlarına basın.
+2. **Regedit** uygulamasını açın: `regedit.exe` yazın ve Enter'a basın.
+3. **HKEY_LOCAL_MACHINE\SYSTEM\Setup** yoluna gidin.
+4. Sağ tıklayıp **Yeni** kısmından **LabConfig** adında bir anahtar oluşturun ve içine girin.
+5. **BypassTPMCheck**, **BypassSecureBootCheck**, **BypassRAMCheck** adında 3 tane **DWORD (32-bit)** oluşturun ve değerini **1** yapın.
+6. Kuruluma devam edin. 🎉
 
 ---
 
