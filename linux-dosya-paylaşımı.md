@@ -14,24 +14,7 @@ sudo apt install rclone
 
 ---
 
-### 2. Paylaşıma Açılacak Yer İçin Servis Ayarlayalım ⚙️
-
-Rclone ile WebDAV paylaşımı yapmak için bir yapılandırma dosyası oluşturmalısınız. Aşağıdaki adımları izleyerek gerekli ayarları yapabilirsiniz:
-
-- Rclone yapılandırma dosyasını oluşturun:
-
-```sh
-rclone config
-```
-
-- Bu komut, sizi bir dizi menüye yönlendirecek. Burada yeni bir "remote" (uzak bağlantı) oluşturmak için "n" tuşuna basın.
-- Paylaşım için bir isim verin (örneğin, `webdav`).
-- "Storage" seçeneği olarak "WebDAV" seçin.
-- WebDAV sunucunuzun URL'sini, kullanıcı adını ve şifresini girin.
-
----
-
-### 3. Servisi Etkinleştirelim 🚀
+### 2. Servisi Etkinleştirelim 🚀
 
 Rclone ile oluşturduğunuz paylaşımı bir sistem servisi olarak çalıştırmak için aşağıdaki adımları izleyin:
 
@@ -61,7 +44,7 @@ sudo systemctl start rclone-share.service
 
 ---
 
-### 4. Paylaşımı Test Edelim ✅
+### 3. Paylaşımı Test Edelim ✅
 
 WebDAV paylaşımınızın çalışıp çalışmadığını test etmek için bir WebDAV istemcisi veya tarayıcı kullanarak `http://<sunucu_ip>:8080` adresine gidin. Eğer her şey doğru ayarlandıysa, dosya paylaşımınıza erişebilmelisiniz.
 
