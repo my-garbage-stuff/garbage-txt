@@ -79,7 +79,7 @@ Winzort Defender, performansı olumsuz etkileyebilir. Bu nedenle kapatılması �
 [Defender Sikici](https://github.com/ionuttbara/windows-defender-remover)
 
 Ayrıca, Edge tarayıcısını kaldırıp Firefox yüklemek için şu bağlantıyı kullanabilirsiniz:
-[Edge Sikici](https://github.com/ionuttbara/edge-remover)
+[Edge Sikici](https://github.com/ShadowWhisperer/Remove-MS-Edge)
 
 ---
 
@@ -132,3 +132,24 @@ rclone serve webdav --addr 127.0.0.1:8000 $HOME
 Artık dosyalarınıza kolayca erişebilir ve paylaşabilirsiniz! 😊
 
 
+## USB Bağlama 🔌
+
+1. Önce USB'yi takın. 💻
+   - Örneğin, bir USB bellek veya harici bir disk takabilirsiniz.
+
+2. `lsusb` komutunu kullanarak vendor ve product ID'sini bulun. 🆔
+   - Terminalde şu komutu çalıştırın:
+     ```
+     lsusb
+     ```
+   - Çıktı örneği:
+     ```
+     Bus 002 Device 003: ID 3131:6969 Example Corp. USB Device
+     ```
+   - Burada **vendor ID** `0x3131` ve **product ID** `0x6969`'dir.
+
+3. QEMU'ya aşağıdaki parametreyi ekleyin: 
+   ```
+   -device qemu-xhci,id=xhci -device usb-host,vendorid=0x3131,productid=0x6969
+   ``` 🛠️
+   - Bu parametre, USB cihazınızı QEMU sanal makinesine bağlamak için kullanılır.
