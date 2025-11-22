@@ -364,37 +364,32 @@ ul.auto-toc {
 <div class="document">
 
 
-<p># Grub Nasıl Elle Kurulur/Onarılır</p>
-<p>Eğer kurulum aşamasında &quot;grub yüklenemedi&quot; gibi bir hata aldıysanız ve sorun detaylı olarak yazmıyorsa, grubu elle yüklemeyi deneyerek hatayı daha detaylı bulabilirsiniz.</p>
-<p>![Grub Kurulum](<a class="reference external" href="https://github.com/user-attachments/assets/4dabe90e-d115-441b-b7ba-c4b3422f07a9">https://github.com/user-attachments/assets/4dabe90e-d115-441b-b7ba-c4b3422f07a9</a>)</p>
-<p>Öncelikle sistemi bu haliyle kurduktan sonra bir terminal açalım ve sistemin kurulu olduğu diski tespit edelim.</p>
-<p>![Disk Tespiti](<a class="reference external" href="https://github.com/user-attachments/assets/fe87c7b8-9aae-4ba7-82f4-0c818551591b">https://github.com/user-attachments/assets/fe87c7b8-9aae-4ba7-82f4-0c818551591b</a>)</p>
-<p>Buradaki örneğimizde <cite>/dev/sda1</cite> diskimiz EFI bölümü, <cite>/dev/sda2</cite> bölümümüz ise kök dizin. (Sizde farklı olabilir)</p>
-<p>Öncelikle bir dizine diskimizi bağlayalım.</p>
-<p>![Disk Bağlama](<a class="reference external" href="https://github.com/user-attachments/assets/bdf34bee-2465-45da-8049-69fc11cc642b">https://github.com/user-attachments/assets/bdf34bee-2465-45da-8049-69fc11cc642b</a>)</p>
-<p>Ardından kök dizinin içine girelim ve grub yükleyelim.</p>
-<p>![Grub Yükleme](<a class="reference external" href="https://github.com/user-attachments/assets/bf201552-2947-4a2b-aafe-5d1a917cc4ff">https://github.com/user-attachments/assets/bf201552-2947-4a2b-aafe-5d1a917cc4ff</a>)</p>
-<p>Bu noktada yukarıdaki gibi bir çıktı aldıysanız, sorunsuz şekilde yüklenmiş demektir.</p>
-<p>İşlem bittikten sonra aşağıdaki gibi diski ayırabilirsiniz.</p>
-<p>![Disk Ayırma](<a class="reference external" href="https://github.com/user-attachments/assets/e1556bd7-1b9a-41ae-8380-3e23436a0199">https://github.com/user-attachments/assets/e1556bd7-1b9a-41ae-8380-3e23436a0199</a>)</p>
-<p>## Olası Çözümler</p>
-<ol class="arabic">
-<li><p class="first"><strong>Kök dizinin grub tarafından okunabilir bir yerde olduğundan emin olun.</strong> Örneğin, grub LVM üzerine kurulamaz. Eğer kök dizini grub tarafından okunamayacak bir şekilde kullanıyorsanız, ayrı bir <cite>/boot</cite> bölümü oluşturun.</p>
-</li>
-<li><p class="first"><strong>Eski kayıtları silin.</strong></p>
-<p>![Eski Kayıtları Silme](<a class="reference external" href="https://github.com/user-attachments/assets/ce5423fa-4fcc-409e-9941-c99ff155e416">https://github.com/user-attachments/assets/ce5423fa-4fcc-409e-9941-c99ff155e416</a>)</p>
-<p>Ardından tekrar kurmaya çalışın.</p>
-</li>
-<li><p class="first"><strong>Eğer işe yaramıyorsa, EFI bölümündeki `grubx64.efi` dosyasını kopyalayın.</strong></p>
-<p>![Grub EFI Dosyası](<a class="reference external" href="https://github.com/user-attachments/assets/b0669f32-a0a4-4fa9-b825-de60efe08d64">https://github.com/user-attachments/assets/b0669f32-a0a4-4fa9-b825-de60efe08d64</a>)</p>
-</li>
-<li><p class="first"><strong>Eğer hâlâ işe yaramıyorsa ve bilgisayarın Windows'tan başka bir şey boot etmediğini düşünüyorsanız, EFI dosyasını Windows'un dosyasının olması gereken konum ile değiştirin.</strong></p>
-<p>![EFI Dosyası Değiştirme](<a class="reference external" href="https://github.com/user-attachments/assets/9ebcadc3-1b74-40a6-aa85-f33e00ec8f57">https://github.com/user-attachments/assets/9ebcadc3-1b74-40a6-aa85-f33e00ec8f57</a>)</p>
-</li>
-<li><p class="first"><strong>Bu da işe yaramıyorsa, bilgisayarınızı çöpe atın ve adam akıllı bir bilgisayar alın.</strong> :D</p>
-</li>
-</ol>
-<p>Bu adımları takip ederek grub kurulumunu veya onarımını gerçekleştirebilirsiniz.</p>
+<p># Müslüman levelleri</p>
+<p>### 1. <strong>Giriş Seviyesi: Boş Paket Müslüman</strong>
+- Ramazan'da oruç tutmayan
+- Bayram namazına nadiren katılan
+- İçki içen, ancak domuz yemeyen
+- Dini bilgiye önem vermeyen, sosyal çevresinden etkilenen</p>
+<p>### 2. <strong>Temel Seviyeye Geçiş: Rüşt İçi Müslüman</strong>
+- Ramazan'da oruç tutmaya başlayıp, sadece bayramda namaz kılan
+- Temel dini bilgileri olan
+- Dönem dönem dini içerikli kitaplar okuma eğilimi gösteren</p>
+<p>### 3. <strong>Orta Seviye: Düzenli Müslüman</strong>
+- Her gün namaz kılan (haftada birkaç gün düzenli)
+- Ramazan'da oruç tutup, zekat vermeye başlayan
+- Dini gruplara katılan ve sosyal medya üzerinden dini içerikler takip eden</p>
+<p>### 4. <strong>İleri Seviye: Dini Yaşayan Müslüman</strong>
+- Tüm farzları yerine getiren
+- Kur'an okuma alışkanlığı olan
+- Dini etkinliklere ve topluluk toplantılarına katılan</p>
+<p>### 5. <strong>Hardcore Seviye: Derwish Müslüman</strong>
+- İbadetlerini düzenli ve titiz bir şekilde yapan
+- Sufizm ve dergah ziyaretleriyle dini derinlemesine yaşayan
+- Başkalarına dini konuda rehberlik eden</p>
+<p>### 6. <strong>Giga Chad Müslüman: Aşırı Düzey</strong>
+- Hem hayatında hem de toplumda yüksek motivasyona sahip
+- İslami bilgi ve uygulamalarının yanı sıra bilimsel ve sosyal konuları harmanlayan
+- Dini liderlik pozisyonlarına sahip olma arzusuyla topluma yön veren</p>
 </div>
 </body>
 </html>
