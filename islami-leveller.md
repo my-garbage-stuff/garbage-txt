@@ -1,5 +1,12 @@
 # Müslüman levelleri
 
+### 0. **Fake müslüman**
+
+* Dini semboller kullanan, fakat içsel bir bağlılık hissetmeyen.
+* Sadece sosyal medyada dini içerikler paylaşarak "influencer" olarak dikkat çekmeye çalışan.
+* Camiye gittiğinde fotoğraf çektirip paylaşan, ancak ibadet etmekten çok görüntüye önem veren.
+
+
 ### 1. **Giriş Seviyesi: Boş Paket Müslüman**
 - Ramazan'da oruç tutmayan
 - Bayram namazına nadiren katılan
