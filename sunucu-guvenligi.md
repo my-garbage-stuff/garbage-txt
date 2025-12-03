@@ -107,7 +107,7 @@ Systemd varsa silip sysvinit veya openrc kullanın.
 fail2ban kullanın
 ```
 $ apt install fail2ban
-
+$ service fail2ban start
 ```
 
 Ayrıca `iptables` kullanmayı öğrenin.
