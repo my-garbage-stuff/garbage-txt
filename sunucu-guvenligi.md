@@ -11,6 +11,9 @@ $ apt list --installed
 $ apt purge --autoremove python3* cloud-init -yq
 ```
 
+### nonfree tüm paketleri silin
+Sunucuda nonfree olan herşeyi silin. https://gist.github.com/sulincix/0b6a044abc05bc3123a9736169cd0838
+
 ## Ssh ayarları
 Ssh bağlantısı için öncelikle elinizde sadece root hesabı varsa yeni kullanıcı oluşturun ve root ile girişi kapatın.
 ```bash
