@@ -454,7 +454,7 @@ netstat <span class="pre">-tlpnu</span>
 `</tt></p>
 <p>## Sunucuda kerneli güncelleme
 Sunucuyu normal şekilde yeniden başlatmak yerine <cite>kexec</cite> kullanın. Hem daha hızlı yeniden başlatılır hem de olası bootloader sorunlarını ortadan kaldırır.
-<tt class="docutils literal">`
+<tt class="docutils literal">`bash
 kexec <span class="pre">-l</span> <span class="pre">/boot/vmlinuz-xxx</span> <span class="pre">--initrd=/boot/initrd.img-xxx</span> <span class="pre">--reuse-cmdline</span>
 kexec <span class="pre">-e</span>
 `</tt></p>
@@ -466,11 +466,18 @@ Systemd varsa silip sysvinit veya openrc kullanın.</p>
 </ul>
 <p>## Brute force engelleme
 fail2ban kullanın
-<tt class="docutils literal">`
+<tt class="docutils literal">`bash
 $ apt install fail2ban
 $ service fail2ban start
 `</tt></p>
 <p>Ayrıca <cite>iptables</cite> kullanmayı öğrenin.</p>
+<p>## Zram ayarlayın
+Zram ramin bir kısmını şifrelediği için daha zor dolmasını sağlar.
+<tt class="docutils literal">`bash
+$ apt install <span class="pre">zram-tools</span>
+# Varsayılan ayarları kurcalamaya gerek yok :D
+$ service zramswap start
+`</tt></p>
 </div>
 </body>
 </html>
