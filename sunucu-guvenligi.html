@@ -375,6 +375,8 @@ $ apt list <span class="pre">--installed</span>
 # silelim (sunucuya python veya x11 ile ilgili paketler olmaması lazım. <span class="pre">cloud-init</span> varsa mutlaka silin)
 $ apt purge <span class="pre">--autoremove</span> python3* <span class="pre">cloud-init</span> <span class="pre">-yq</span>
 `</tt></p>
+<p>### nonfree tüm paketleri silin
+Sunucuda nonfree olan herşeyi silin. <a class="reference external" href="https://gist.github.com/sulincix/0b6a044abc05bc3123a9736169cd0838">https://gist.github.com/sulincix/0b6a044abc05bc3123a9736169cd0838</a></p>
 <p>## Ssh ayarları
 Ssh bağlantısı için öncelikle elinizde sadece root hesabı varsa yeni kullanıcı oluşturun ve root ile girişi kapatın.
 <tt class="docutils literal">`bash
@@ -401,7 +403,7 @@ Sunucuyu tarayan botlara gözükmemek için ve sunucuyu daha sağlam hale getirm
 kernel.unprivileged_bpf_disabled=1
 net.core.bpf_jit_harden=2</p>
 <div class="system-message" id="system-message-1">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 14); <em><a href="#problematic-1">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 17); <em><a href="#problematic-1">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <p>## better ASLR
 kernel.randomize_va_space=2
@@ -432,10 +434,10 @@ Ayarları uygulamak için:
 sysctl -p /etc/sysctl.d/990-security.conf
 <a href="#system-message-2"><span class="problematic" id="problematic-2">``</span></a><a href="#system-message-3"><span class="problematic" id="problematic-3">`</span></a></p>
 <div class="system-message" id="system-message-2">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 57); <em><a href="#problematic-2">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 60); <em><a href="#problematic-2">backlink</a></em></p>
 Inline literal start-string without end-string.</div>
 <div class="system-message" id="system-message-3">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 57); <em><a href="#problematic-3">backlink</a></em></p>
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 60); <em><a href="#problematic-3">backlink</a></em></p>
 Inline interpreted text or phrase reference start-string without end-string.</div>
 <p>## Dosyaları şifreleme
 Sunucu firmasının disk yedeğini alıp dosya sisteminden bilgi elde etmesini risk olarak görüp buna engel olmak istiyorsanız disk şifreleme kullanabilirsiniz.
