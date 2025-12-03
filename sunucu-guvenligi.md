@@ -98,6 +98,8 @@ kexec -e
 
 ## Systemd kullanmayın
 Systemd varsa silip sysvinit veya openrc kullanın. 
-Bunun için [devuan](https://www.devuan.org/) depolarını da ekleyip sistemi devuana çevirebilirsiniz.
-Alternatif olarak debian üzerine sysvinit ve openrc kurmak mümkündür. https://gist.github.com/sulincix/1aeeb6ff99ea14e1ff76afc301b25785
+
+* Bunun için [devuan](https://www.devuan.org/) depolarını da ekleyip sistemi devuana çevirebilirsiniz.
+
+* Alternatif olarak debian üzerine sysvinit ve openrc kurmak mümkündür. https://gist.github.com/sulincix/1aeeb6ff99ea14e1ff76afc301b25785
 
