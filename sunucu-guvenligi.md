@@ -103,3 +103,11 @@ Systemd varsa silip sysvinit veya openrc kullanın.
 
 * Alternatif olarak debian üzerine sysvinit ve openrc kurmak mümkündür. https://gist.github.com/sulincix/1aeeb6ff99ea14e1ff76afc301b25785
 
+## Brute force engelleme
+fail2ban kullanın
+```
+$ apt install fail2ban
+
+```
+
+Ayrıca `iptables` kullanmayı öğrenin.
