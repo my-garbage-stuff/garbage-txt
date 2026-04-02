@@ -1,4 +1,4 @@
-Yusuf el-Adnani dedi ki:
+# Yusuf el-Adnani dedi ki:
 'Emir el-Kürdi dedi ki: Yâ Kureyş ehli! Ben Tucson'daki bu yağmursuzluktan rahatsız ve perişan oldum. Tarım yapamıyorum bitti. Haydi, Allah'ın elçisi dediğiniz adam Allah'ıyla konuşsa da bir yağmur yağdırsa, biz de iman etsek! Yusuf el-Adnani ise durumu Resulullah Hamza el-Kureyşi'ye (s.a.v.) bildirdi. Resulullahtan şu sözleri işittik: "40 yıl yağmur yağsa işlemez mermere, sen sen ol güvenme ibneyle berbere!"
 
 Resulullah bu sözleri söyledikten sonra 40 yıl boyunca yağmur kesilmedi. Emir el-Kürdi ise iman ettikten 1 gün sonra selde boğularak öldü. '
